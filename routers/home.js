@@ -6,6 +6,9 @@ const Club=require('../models/club');
 Router.get('/',(err,res)=>{
     res.render("index");
 })
+Router.get('/add',(err,res)=>{
+    res.render("add");
+})
 //insertion
 Router.post('/add',(req,res)=>{
      const name=req.body.name;
