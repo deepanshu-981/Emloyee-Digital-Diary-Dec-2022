@@ -13,10 +13,11 @@ Router.get('/add',(err,res)=>{
 Router.post('/add',(req,res)=>{
      const name=req.body.name;
      const email=req.body.email;
-
-    //  console.log(name,email);
+    const desig=req.body.desig;
+    const jdate=(req.body.jdate);
+     console.log(name,email,jdate);
     const club= new Club({
-        name,email
+        name,email,desig,jdate
     })
     club.save(err=>{
         if(err){
